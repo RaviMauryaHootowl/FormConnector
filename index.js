@@ -1,10 +1,13 @@
 const express=require('express');
 const bodyParser=require('body-parser');
+var cors = require('cors');
 const api = require('./api');
   
 const port=3000;
 const app=express();
-   
+
+app.use(cors())
+
 app.listen(port, function() {
     console.log("Server is listening at port:" + port);
 }); 
