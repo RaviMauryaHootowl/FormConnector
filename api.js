@@ -20,12 +20,12 @@ useUnifiedTopology: true }, function(error) {
 router.post('/save', async (req, res) => {
     const body = req.body;
     const alumniData = {
-        name: body["Name"],
-        email: body["Email"],
-        phone: body["Phone"],
-        address: body["Address"],
-        grad_year: body["Graduation Year"],
-        class_name: body["Class Name"],
+        name: body["Name"][0],
+        email: body["Email"][0],
+        phone: body["Phone"][0],
+        address: body["Address"][0],
+        grad_year: body["Graduation Year"][0],
+        class_name: body["Class Name"][0],
     }
     await AlumniModel.create(alumniData);
     res.send(alumniData);
