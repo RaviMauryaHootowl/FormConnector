@@ -22,6 +22,8 @@ router.post('/save', async (req, res) => {
     const alumniData = {
         name: body["Name"][0],
         email: body["Email"][0],
+        password: body["New Password"][0],
+        age: body["Age"][0],
         phone: body["Phone"][0],
         address: body["Address"][0],
         grad_year: body["Graduation Year"][0],
